@@ -3,72 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ ธนยศ">
-    <title>ความภาคภูมิใจของ TANAYOS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Portfolio - ธนยศ ตรีสุวรรณ</title>
+    <!-- นำเข้าฟอนต์ Kanit จาก Google Fonts เพื่อให้เว็บดูสวยทันสมัย -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
+        /* ส่วนหัวและแนะนำตัว (Hero Section) */
+        .hero-section {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .hero-section p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ส่วนโปรไฟล์และทักษะ */
+        .profile-skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .profile-card, .skills-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        /* จัดการรูปโปรไฟล์ */
+        .profile-image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-image-container img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4facfe;
+            background-color: #e9ecef; /* สีพื้นหลังเผื่อรูปไม่โหลด */
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #4facfe;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* ป้ายทักษะ (Skill Tags) */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .skill-tag {
+            background-color: #e1f5fe;
+            color: #0277bd;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            border: 1px solid #81d4fa;
+        }
+
+        /* ส่วนผลงาน */
+        .portfolio-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .project-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fafafa;
+        }
+        .project-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+        .project-info {
+            padding: 20px;
+        }
+
+        /* ส่วนท้าย (Footer) */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        footer a {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
 
-    <header>
-        <h1>สวัสดี! ผมคือ ธนยศ</h1>
-        <p>นี่คือผลงานและความภาคภูมิใจของผม</p>
-    </header>
-
-    <section id="about">
-        <h2>เกี่ยวกับผม</h2>
-        <div class="about-content">
-            <img src="profile.jpg" alt="รูปภาพโปรไฟล์ของธนยศ" class="profile-img">
+    <div class="container">
+        <!-- ส่วนหน้าแรก: แนะนำตัวและเป้าหมาย -->
+        <header class="hero-section">
+            <h1>สวัสดีครับ ผมชื่อ ธนยศ ตรีสุวรรณ</h1>
             <p>
-                ผมเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ
-                ผมภูมิใจในผลงานและทักษะที่ผมพัฒนามาอย่างต่อเนื่อง
+                เป้าหมายของผมคือ ผมอยากเก็บแต้มคุยกับคนญี่ปุ่นครับ ตอนนี้ผมอยู่ในระดับ JLPT N5 และมีเป้าหมายที่จะขึ้นไประดับ N2 - N1 ครับ 
+                ผมมีความตั้งใจที่จะเชื่อมต่อความสัมพันธ์กับคนญี่ปุ่น อยากรู้วัฒนธรรมและมุมมองความคิดของพวกเขา และได้เป็นเพื่อนกับพวกเขาครับ
             </p>
+        </header>
+
+        <!-- ส่วนโปรไฟล์ และ ทักษะ -->
+        <div class="profile-skills-section">
+            
+            <!-- กล่องใส่รูปโปรไฟล์ -->
+            <section class="profile-card">
+                <h2>รูปโปรไฟล์ของผม</h2>
+                <div class="profile-image-container">
+                    <!-- ⬇️ ใส่ชื่อไฟล์รูปโปรไฟล์ของคุณตรงคำว่า "my-profile.jpg" ⬇️ -->
+                    <img src="my-profile.jpg" alt="รูปโปรไฟล์ของธนยศ">
+                </div>
+            </section>
+
+            <!-- กล่องแสดงทักษะ -->
+            <section class="skills-card">
+                <h2>ทักษะของผม</h2>
+                <div class="skills-list">
+                    <span class="skill-tag">🇯🇵 ทักษะภาษาญี่ปุ่น N5</span>
+                    <span class="skill-tag">🇬🇧 ภาษาอังกฤษ</span>
+                    <span class="skill-tag">🎤 การพูดนำเสนอ</span>
+                </div>
+            </section>
+
         </div>
-    </section>
 
-    <section id="projects">
-        <h2>ผลงานของผม</h2>
-
-        <div class="projects-grid">
+        <!-- ส่วนผลงาน -->
+        <section class="portfolio-section">
+            <h2>ผลงานที่โดดเด่น</h2>
             <div class="project-card">
-                <img src="project1.jpg" alt="ภาพตัวอย่างเว็บไซต์อะไรสักอย่าง" class="project-img">
+                <!-- ⬇️ ใส่ชื่อไฟล์รูปผลงานของคุณตรงคำว่า "my-portfolio-work.jpg" ⬇️ -->
+                <img src="my-portfolio-work.jpg" alt="รูปผลงานของฉัน">
                 <div class="project-info">
-                    <h3>เว็บไซต์ อะไรสักอย่าง</h3>
-                    <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงอะไรสักอย่างของผม</p>
+                    <h3>ชื่อผลงาน / กิจกรรมของคุณ</h3>
+                    <p>เขียนอธิบายผลงาน หรือประสบการณ์ที่เกี่ยวกับภาษาญี่ปุ่น / การนำเสนอของคุณที่นี่...</p>
                 </div>
             </div>
+        </section>
 
-            <div class="project-card">
-                <img src="project2.jpg" alt="ภาพตัวอย่างแอปพลิเคชันจัดการงาน" class="project-img">
-                <div class="project-info">
-                    <h3>แอปพลิเคชันจัดการงาน</h3>
-                    <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>ทักษะของผม</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python, Django</li>
-            <li>Git และ GitHub</li>
-            <li>การออกแบบ UI/UX</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>
-            ติดต่อผมได้ที่:
-            <a href="mailto:tanayos503@gmail.com">tanayos503@gmail.com</a>
-        </p>
-        <p>
-            &copy; <span id="year">2026</span> TANAYOS. All rights reserved.
-        </p>
-    </footer>
-
-    <script src="script.js"></script>
+        <!-- ส่วนติดต่อ -->
+        <footer>
+            <h2>ช่องทางการติดต่อ</h2>
+            <p>อีเมล: <a href="mailto:tanayos503@gmail.com">tanayos503@gmail.com</a></p>
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.7;">&copy; 2026 Tanayos. All rights reserved.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
