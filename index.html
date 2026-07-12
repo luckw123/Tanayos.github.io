@@ -2,55 +2,73 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio ของธนยศ</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; }
-        section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        ul { list-style-type: none; padding: 0; }
-        li { background: #eef; margin: 5px 0; padding: 10px; border-radius: 4px; }
-        .contact { font-weight: bold; color: #007bff; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ ธนยศ">
+    <title>ความภาคภูมิใจของ TANAYOS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <h1>ยินดีต้อนรับสู่ Portfolio ของผม</h1>
-        <p>สวัสดี! ผมคือ ธนยศ และนี่คือพื้นที่แสดงความภาคภูมิใจของผม</p>
+        <h1>สวัสดี! ผมคือ ธนยศ</h1>
+        <p>นี่คือผลงานและความภาคภูมิใจของผม</p>
     </header>
 
-    <section>
+    <section id="about">
         <h2>เกี่ยวกับผม</h2>
-        <p>ผมเป็นนักพัฒนาที่หลงใหลในการสร้างสรรค์แอปพลิเคชันและเว็บไซต์ที่ใช้งานง่ายและมีประสิทธิภาพ</p>
+        <div class="about-content">
+            <img src="profile.jpg" alt="รูปภาพโปรไฟล์ของธนยศ" class="profile-img">
+            <p>
+                ผมเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ
+                ผมภูมิใจในผลงานและทักษะที่ผมพัฒนามาอย่างต่อเนื่อง
+            </p>
+        </div>
     </section>
 
-    <section>
+    <section id="projects">
         <h2>ผลงานของผม</h2>
-        <ul>
-            <li><strong>เว็บไซต์ตัวอย่าง:</strong> เว็บไซต์ที่ออกแบบมาเพื่อแสดงผลงานส่วนตัว</li>
-            <li><strong>แอปพลิเคชันจัดการงาน:</strong> แอปฯ ที่ช่วยให้ผู้ใช้งานจัดการตารางเวลาได้อย่างเป็นระเบียบ</li>
-        </ul>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project1.jpg" alt="ภาพตัวอย่างเว็บไซต์อะไรสักอย่าง" class="project-img">
+                <div class="project-info">
+                    <h3>เว็บไซต์ อะไรสักอย่าง</h3>
+                    <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงอะไรสักอย่างของผม</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="project2.jpg" alt="ภาพตัวอย่างแอปพลิเคชันจัดการงาน" class="project-img">
+                <div class="project-info">
+                    <h3>แอปพลิเคชันจัดการงาน</h3>
+                    <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
+    <section id="skills">
         <h2>ทักษะของผม</h2>
         <ul>
-            <li>Front-end: HTML, CSS, JavaScript</li>
-            <li>Back-end: Python, Django</li>
-            <li>Tools: Git & GitHub</li>
-            <li>Design: UI/UX Design</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python, Django</li>
+            <li>Git และ GitHub</li>
+            <li>การออกแบบ UI/UX</li>
         </ul>
-    </section>
-
-    <section>
-        <h2>ติดต่อผม</h2>
-        <p>หากสนใจร่วมงานหรือสอบถามเพิ่มเติม สามารถติดต่อได้ที่:</p>
-        <p class="contact">tanayos503[at]gmail.com</p>
     </section>
 
     <footer>
-        <p>&copy; 2026 TANAYOS. All rights reserved.</p>
+        <p>
+            ติดต่อผมได้ที่:
+            <a href="mailto:tanayos503@gmail.com">tanayos503@gmail.com</a>
+        </p>
+        <p>
+            &copy; <span id="year">2026</span> TANAYOS. All rights reserved.
+        </p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
